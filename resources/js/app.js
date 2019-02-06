@@ -9,22 +9,19 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import App from './App.vue';
 import router from './router';
 import VueStores from './stores';
+import VueConfetti from 'vue-confetti';
+import VueProgressBar from 'vue-progressbar';
+
 Vue.use(require('vue-shortkey'));
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+Vue.use(VueConfetti)
+Vue.use(VueProgressBar, {
+    color: 'rgb(35, 80, 160)',
+    failedColor: 'red',
+    height: '2px'
+});
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,10 +32,7 @@ Vue.use(require('vue-shortkey'));
 const app = new Vue({
     el: '#app',
     router,
-    template: '<App/>',
     store: VueStores,
-    components: {
-        App
-    }
+
 });
 global.vm = app;

@@ -27,7 +27,12 @@
 
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+    <router-view></router-view>
+    <vue-progress-bar></vue-progress-bar>
+</div>
+<!-- set progressbar -->
+
 <script src="{{ mix('js/app.js') }}"></script>
 <script>
     if ('serviceWorker' in navigator ) {

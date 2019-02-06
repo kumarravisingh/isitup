@@ -10531,6 +10531,43 @@ a.text-dark:focus {
   .container {
     margin-top: 50% !important;
   }
+
+  .result-url {
+    font-family: "Noto Serif", Serif;
+    font-size: x-large !important;
+    font-weight: bold;
+    text-align: center !important;
+    color: #275169d9;
+  }
+
+  .result-text {
+    font-family: "Noto Serif", Serif;
+    font-size: large !important;
+    text-align: center !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .result-url {
+    font-family: "Noto Serif", Serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #275169d9;
+  }
+
+  .result-text {
+    font-family: "Noto Serif", Serif;
+    font-size: xx-large;
+  }
+
+  .result-ms {
+    font-family: "Noto Serif", Serif;
+    font-size: large;
+  }
+}
+
+.result-row {
+  margin-top: -2rem !important;
 }
 
 html,
