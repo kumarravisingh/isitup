@@ -12,3 +12,41 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+body {
+}
+main {
+ // margin-top: 50%;
+}
+.container{
+  font-family: 'Noto Serif', Serif;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15% !important;
+  margin-bottom: auto;
+}
+.outside{
+  font-size: large;
+
+}
+#is{
+  text-align:right;
+}
+#up{
+  text-align: left;
+}
+.search-box{
+  font-size: large;
+  font-weight: bold;
+  color: #275169d9;
+}
+@media (max-width: 768px) {
+  .outside, .search-box {
+    text-align: center !important;
+  }
+  .container{
+    margin-top: 50% !important;
+  }
+}
+
+html, body {height: 100%;}
