@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66ca7343889332c2b8ecca11c251430c",
+    "content-hash": "e35a1c3234a698cac243af27a2f107a8",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -638,17 +638,66 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
-            "name": "laravel/framework",
-            "version": "v5.7.24",
+            "name": "karlmonson/laravel-ping",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "2ede55db4b8201ed0450fa7e7a4d7220aa29bc34"
+                "url": "https://github.com/karlmonson/laravel-ping.git",
+                "reference": "d8eaada970d44e0cf3cf4920d8d182938db34422"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ede55db4b8201ed0450fa7e7a4d7220aa29bc34",
-                "reference": "2ede55db4b8201ed0450fa7e7a4d7220aa29bc34",
+                "url": "https://api.github.com/repos/karlmonson/laravel-ping/zipball/d8eaada970d44e0cf3cf4920d8d182938db34422",
+                "reference": "d8eaada970d44e0cf3cf4920d8d182938db34422",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "illuminate/support": "^5.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Karlmonson\\Ping\\PingServiceProvider"
+                    ],
+                    "aliases": {
+                        "Ping": "Karlmonson\\Ping\\Facades\\Ping"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Karlmonson\\Ping\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Karl Monson",
+                    "email": "karl@karlmonson.com",
+                    "homepage": "https://github.com/karlmonson",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple Ping For Laravel Applications",
+            "time": "2018-05-25T18:29:21+00:00"
+        },
+        {
+            "name": "laravel/framework",
+            "version": "v5.7.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "f8fb354878064b94a3ff09a6ffd48ee9a8d712cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f8fb354878064b94a3ff09a6ffd48ee9a8d712cf",
+                "reference": "f8fb354878064b94a3ff09a6ffd48ee9a8d712cf",
                 "shasum": ""
             },
             "require": {
@@ -781,7 +830,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-01-29T22:13:46+00:00"
+            "time": "2019-02-05T14:28:43+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",

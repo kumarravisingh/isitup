@@ -3,26 +3,19 @@ import axios from 'axios';
 
 export default {
     state: {
-        data :{},
 
     },
     mutations: {
 
-        SET_DATA(state, data) {
-            state.data = data;
-        }
     },
     actions: {
-        getUserData({state,commit}){
-            axios.post('/user-data')
+        getUpStatus({state,commit}, url){
+            return axios.post('/up/' + url)
                 .then(function (response) {
-                  //  vm.$Progress.finish();
-                   // commit('SET_DATA',response.data);
-
+                    return response
                 })
                 .catch(function (error) {
-                    vm.displayError(error);
-
+                    return error;
                 });
         },
     }

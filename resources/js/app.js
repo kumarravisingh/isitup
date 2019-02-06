@@ -12,6 +12,7 @@ window.Vue = require('vue');
 import App from './App.vue';
 import router from './router';
 import VueStores from './stores';
+Vue.use(require('vue-shortkey'));
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
