@@ -1872,8 +1872,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     reset: function reset() {
-      this.result = false; //this.url = null;
-
+      this.result = false;
+      this.url = null;
       this.$confetti.stop();
     }
   })
@@ -36862,9 +36862,17 @@ var render = function() {
                       _c("div", { staticClass: "form-group mt-2 row " }, [
                         _c("div", { staticClass: "col-md-12 text-center " }, [
                           _c("input", {
+                            directives: [
+                              {
+                                name: "shortkey",
+                                rawName: "v-shortkey",
+                                value: ["enter"],
+                                expression: "['enter']"
+                              }
+                            ],
                             staticClass: "btn btn-info",
                             attrs: { type: "button", value: "Go Back" },
-                            on: { click: _vm.reset }
+                            on: { shortkey: _vm.reset, click: _vm.reset }
                           })
                         ])
                       ])

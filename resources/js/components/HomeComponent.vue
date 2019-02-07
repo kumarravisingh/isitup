@@ -50,7 +50,7 @@
 
                                 <div class="form-group mt-2 row ">
                                     <div class="col-md-12 text-center ">
-                                        <input type="button" @click="reset" class="btn btn-info" value="Go Back"/>
+                                        <input type="button" v-shortkey="['enter']" @shortkey="reset" @click="reset" class="btn btn-info" value="Go Back"/>
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
             },
             reset:function () {
                 this.result = false;
-                //this.url = null;
+                this.url = null;
                 this.$confetti.stop();
 
             }
