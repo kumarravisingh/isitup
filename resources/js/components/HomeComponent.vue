@@ -4,7 +4,7 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-10">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body mt-4">
                             <div v-if="result == false">
                                 <div class="form-group mt-2 row" >
                                     <div id="is" class="col-md-3 outside mt-1 align-content-center">
@@ -63,6 +63,12 @@
         </div>
     </main>
 </template>
+
+<style>
+    .card{
+        box-shadow: -1px 4px 28px 3px #6a5384;
+    }
+</style>
 
 <script>
     import {mapActions} from 'vuex';

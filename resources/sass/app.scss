@@ -40,6 +40,7 @@ main {
   font-size: large;
   font-weight: bold;
   color: #275169d9;
+  box-shadow: 1px 2px 14px -3px red !important;
 }
 @media (max-width: 768px) {
   .outside, .search-box {
