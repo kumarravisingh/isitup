@@ -1842,9 +1842,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       'resultText': 'up.'
     };
   },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  },
   methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(["getUpStatus"]), {
     checkStatus: function checkStatus() {
       var _this = this;

@@ -73,9 +73,6 @@
               'resultText':'up.',
           }
         },
-        mounted() {
-            console.log('Component mounted.')
-        },
         methods:{
             ...mapActions([
                 "getUpStatus",
