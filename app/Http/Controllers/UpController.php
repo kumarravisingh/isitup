@@ -10,7 +10,6 @@ class UpController extends Controller
 
     /**
      * Check website is up
-     * @return \Illuminate\Http\Response
      */
     public function show(){
         return view('welcome');

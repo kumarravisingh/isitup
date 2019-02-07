@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'UpController@show');
+Route::get('/','UpController@show');
 Route::post('up/{url}','UpController@up');
