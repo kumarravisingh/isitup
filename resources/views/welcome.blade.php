@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-    <meta name="Description" content="Is it up india">
+    <meta name="Keywords" content="isitup, isitup india, check website up status, open source isitup">
+    <meta name="Description" content="isitup india is open source tool to check if your website or IP is up or down">
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#FFFFFF" />
     <meta name="apple-mobile-web-app-capable" content="yes">

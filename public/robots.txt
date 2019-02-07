@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /css/
+Disallow: /js/
+Disallow: /svg
+Disallow: /*.json
+Disallow: /*.txt
+Sitemap: http://isitup.in/sitemap.xml
