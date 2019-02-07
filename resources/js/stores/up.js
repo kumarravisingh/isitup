@@ -10,7 +10,7 @@ export default {
     },
     actions: {
         getUpStatus({state,commit}, url){
-            return axios.post('/up/' + url)
+            return axios.post('up/' + url)
                 .then(function (response) {
                     return response
                 })

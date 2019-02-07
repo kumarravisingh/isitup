@@ -62414,7 +62414,7 @@ __webpack_require__.r(__webpack_exports__);
     getUpStatus: function getUpStatus(_ref, url) {
       var state = _ref.state,
           commit = _ref.commit;
-      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/up/' + url).then(function (response) {
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('up/' + url).then(function (response) {
         return response;
       }).catch(function (error) {
         return error;
