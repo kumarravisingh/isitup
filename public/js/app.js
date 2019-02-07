@@ -52708,7 +52708,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       x: 0,
       y: 0
     };
-  }
+  },
+  mode: 'history'
 }));
 
 /***/ }),
