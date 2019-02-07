@@ -5122,6 +5122,11 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
+noty@^3.1.0:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/noty/-/noty-3.1.4.tgz#f9eaac9df7883921b270ec6f2869e9aeedd8071b"
+  integrity sha512-HKOH392eBygTojC6fXVBOFxTqebjnn/e7/AS69zlWSH3Tn6+0RzfT3aDCGx2PY6Ed3xKBPhtz+xeHAHQGEh68Q==
+
 npm-bundled@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.5.tgz#3c1732b7ba936b3a10325aef616467c0ccbcc979"
@@ -7611,6 +7616,11 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+vee-validate@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-2.1.7.tgz#33984454d8a633cdc4825a2cf5857747d91bae67"
+  integrity sha512-IyPDTTvIRY6o9y14jXlgfY76Qv+hmvYDwNaMn9JY5KbQN8a1tJAu7H/+a/+EdHg1w8Zl9tsdG8lndGqY1lyMzQ==
+
 vendors@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.2.tgz#7fcb5eef9f5623b156bcea89ec37d63676f21801"
@@ -7691,6 +7701,13 @@ vue@^2.5.17:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.1.tgz#2167a19e6489ff8082388f7c5f5caf56a32ddba9"
   integrity sha512-ka6pgKZSa44+/11g+sD99Akajt0GceTnT8tagqLrQovXptgwaiLaEOHzMA/FLR07lGIfIR2UTHb69bTRBN71dA==
+
+vuejs-noty@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/vuejs-noty/-/vuejs-noty-0.1.3.tgz#c665b70c9cfdf7c32f0107a734ecd2b86674af78"
+  integrity sha512-qHdEpq3IQMg3Upf6UAQrcEtRGNZfH3gQd1KLJYQE52rmYaNp79ZAj8F7kP2xDKpSBGBERvCUAy7txNiodRxAYg==
+  dependencies:
+    noty "^3.1.0"
 
 vuex@^3.1.0:
   version "3.1.0"

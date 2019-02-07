@@ -13,6 +13,8 @@ import router from './router';
 import VueStores from './stores';
 import VueConfetti from 'vue-confetti';
 import VueProgressBar from 'vue-progressbar';
+import VeeValidate from 'vee-validate';
+import VueNoty from 'vuejs-noty';
 
 Vue.use(require('vue-shortkey'));
 Vue.use(VueConfetti)
@@ -21,7 +23,12 @@ Vue.use(VueProgressBar, {
     failedColor: 'red',
     height: '2px'
 });
-
+Vue.use(VeeValidate);
+Vue.use(VueNoty, {
+    timeout: 4000,
+    layout: 'topCenter',
+    progressBar: true,
+});
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

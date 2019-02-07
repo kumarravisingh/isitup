@@ -17,11 +17,12 @@
                                                 id="email"
                                                 v-shortkey="['enter']"
                                                 @shortkey="checkStatus"
-                                                type="email" class="form-control search-box"
-                                                name="email"
+                                                type="text" class="form-control search-box"
+                                                name="url"
                                                 value=""
                                                 required
                                                 autofocus
+                                                v-validate="'required'"
                                         >
                                     </div>
                                     <div id="up" class="col-md-3 outside  mt-1 align-content-center">
@@ -66,6 +67,9 @@
 <script>
     import {mapActions} from 'vuex';
     export default {
+        inject: {
+            $validator: '$validator'
+        },
         data(){
           return{
               'url':null,
@@ -79,25 +83,36 @@
                 "getUpStatus",
             ]),
             checkStatus:function(){
-                this.$Progress.start();
-                this.getUpStatus(this.url).then((response)=>{
-                    this.$Progress.finish();
-                    this.result = true;
-                    if(response.status == 200){
-                        this.ms = response.data.timeInMillisecond;
-                        this.resultText = ' up.';
-                        this.$confetti.start({
-                            shape:'rect'
+                this.$validator.validate().then(result => {
+                    if(result == true){
+                        this.$Progress.start();
+                        this.getUpStatus(this.url).then((response)=>{
+                            this.$Progress.finish();
+                            this.result = true;
+                            if(response.status == 200){
+                                this.ms = response.data.timeInMillisecond;
+                                this.resultText = ' up.';
+                                this.$confetti.start({
+                                    shape:'rect'
+                                });
+                                setTimeout(()=> {
+                                    this.$confetti.stop();
+                                }, 3000);
+                            } else {
+                                this.ms = null;
+                                this.resultText = ' down.';
+                            }
+
                         });
-                        setTimeout(()=> {
-                            this.$confetti.stop();
-                        }, 3000);
-                    } else {
-                        this.ms = null;
-                        this.resultText = ' down.';
+                    }
+                    else {
+                        this.$noty.error("Please enter a website URL or IP Address")
                     }
 
                 });
+
+
+
             },
             reset:function () {
                 this.result = false;
