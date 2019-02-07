@@ -1832,6 +1832,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1848,8 +1849,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       this.$Progress.start();
       this.getUpStatus(this.url).then(function (response) {
-        console.log(response);
-
         _this.$Progress.finish();
 
         _this.result = true;
@@ -1872,9 +1871,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     reset: function reset() {
+      var _this2 = this;
+
       this.result = false;
       this.url = null;
       this.$confetti.stop();
+      this.$nextTick(function () {
+        _this2.$refs.check.focus();
+
+        console.log(_this2.$refs.check);
+      });
     }
   })
 });
@@ -36778,6 +36784,7 @@ var render = function() {
                                 expression: "['enter']"
                               }
                             ],
+                            ref: "check",
                             staticClass: "form-control search-box",
                             attrs: {
                               id: "email",

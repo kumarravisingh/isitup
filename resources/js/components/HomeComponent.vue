@@ -13,6 +13,7 @@
                                     <div class="col-md-6">
                                         <input
                                                 v-model="url"
+                                                ref="check"
                                                 id="email"
                                                 v-shortkey="['enter']"
                                                 @shortkey="checkStatus"
@@ -29,7 +30,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12 form-group text-center">
-                                        <input @click="checkStatus" type="button" class="btn btn-info align-content-center" value="Check Status">
+                                        <input @click="checkStatus"  type="button" class="btn btn-info align-content-center" value="Check Status">
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +81,6 @@
             checkStatus:function(){
                 this.$Progress.start();
                 this.getUpStatus(this.url).then((response)=>{
-                    console.log(response);
                     this.$Progress.finish();
                     this.result = true;
                     if(response.status == 200){
@@ -103,6 +103,12 @@
                 this.result = false;
                 this.url = null;
                 this.$confetti.stop();
+                this.$nextTick(() => {
+                    this.$refs.check.focus();
+                    console.log(this.$refs.check);
+                });
+
+
 
             }
         }
