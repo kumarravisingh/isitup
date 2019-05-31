@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('up/{url}', 'UpController@up');
+//Route::post('up/{url}', 'UpController@up');
